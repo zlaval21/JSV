@@ -14,7 +14,7 @@ document.getElementById("audiofile").onchange = function(event) {
         
         // Loading in the new song
         song = loadSound(URL.createObjectURL(event.target.files[0]));
-        //loader.classList.add("loading");
+        loader.classList.add("loading");
     }
 }
 
@@ -43,7 +43,7 @@ function draw() {
     if(typeof song != "undefined" 
        && song.isLoaded() 
        && !song.isPlaying()) { // Do once
-        //loader.classList.remove("loading");
+        loader.classList.remove("loading");
         
         song.play();
         song.setVolume(0.5);
